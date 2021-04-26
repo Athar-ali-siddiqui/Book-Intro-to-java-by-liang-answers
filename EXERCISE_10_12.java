@@ -1,4 +1,5 @@
 
+
 import java.util.*;
 
 class MyPoint{ // this class is also in Ex:10.4
