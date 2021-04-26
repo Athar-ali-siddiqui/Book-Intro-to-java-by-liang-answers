@@ -5,7 +5,7 @@ class StopWatch{
   private long stopTime;
   
   StopWatch(){
-    this.startTime = new Date().getTime();
+    this.startTime = new Date().getTime(); 
   }
   public void start(){
     this.startTime = new Date().getTime();
