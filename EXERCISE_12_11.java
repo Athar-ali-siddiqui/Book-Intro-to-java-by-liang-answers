@@ -1,5 +1,6 @@
 public class EXERCISE_12_11{
   public static void main(String [] args) throws Exception {
+    
 	//COmmand-line argument
     File file = new File(args[0]);
     Scanner in = new Scanner(file);
