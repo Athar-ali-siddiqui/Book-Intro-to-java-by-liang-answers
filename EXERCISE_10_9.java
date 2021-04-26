@@ -1,4 +1,5 @@
 
+
 class Course{
   private String name;
   private String[] students = new String[0];
