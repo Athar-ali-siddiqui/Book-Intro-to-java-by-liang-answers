@@ -1,6 +1,7 @@
 public class EXERCISE_12_12
    public static void main(String [] args) throws Exception {
 	//Command line arguments
+  
     String newFileName = args[0].substring(0, args[0].indexOf(".")) + "NLB" + args[0].substring(args[0].indexOf("."));
     System.out.println(newFileName);
     File file = new File(args[0]);
