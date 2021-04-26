@@ -3,7 +3,6 @@ import java.io.*;
 
 import java.util.*;
 
-
 public class EXERCISE_12_30 {
   // public static Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 
