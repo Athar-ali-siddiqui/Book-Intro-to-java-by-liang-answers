@@ -4,7 +4,60 @@ import java.util.*;
 
 public class EXERCISE_11_2{
   public static void main(String[] args) {
-   
+    ArrayList<Person> list = new ArrayList<>();
+    Scanner in =new Scanner(System.in)   ;
+    int choice ;
+    String name;String address;String phoneNumber;String email;
+    while(true){
+      System.out.print
+      ("\nMain Menu          0: To Exit\n1: Create Person\n2: Create Student \n3: Create Employee\n4: Create Faculty\n5: Create Staff\n6: Call toString()\nEnter Choice :");
+      choice = in.nextByte();
+      if(choice == 0){
+        break;
+      }else if ( choice == 6){
+        System.out.println(" ");
+        for (Person person : list) {
+          System.out.println(person.toString());
+        }
+      }
+      System.out.print("Enter Following Details\nName: "); name = in.next();
+      System.out.print("Address: "); address= in.next();
+      System.out.print("Phone No.: "); phoneNumber= in.next();
+      System.out.print("Email: "); email= in.next();
+      int salary = 0;
+      if(choice ==3 || choice == 4 || choice ==5){
+        System.out.print("Salary: ");
+        salary= in.nextInt();
+      }
+      
+      if(choice == 1){
+        list.add(new Person(name, address, phoneNumber, email));
+      }
+      else if ( choice == 2){
+        System.out.print("Class status: ");
+        String classStatus = in.next();
+        list.add(new Student(name, address, phoneNumber, email, classStatus));
+      }
+      
+      else if ( choice == 3){
+        
+        list.add(new Employee(name, address, phoneNumber, email, salary));
+      }
+      else if ( choice == 4){
+        System.out.print("Rank: ");
+        String rank = in.next();
+        System.out.print("Total job hours: ");
+        int hours = in.nextInt();
+        list.add(new Faculty(name, address, phoneNumber, email, salary, hours, rank));
+      }
+      else if ( choice == 5){
+        System.out.print("Job title: ");
+        String title = in.next();
+        list.add(new Staff(name, address, phoneNumber, email, salary, title));
+      }
+      
+      
+    }      
   }
 }
 class Person{
